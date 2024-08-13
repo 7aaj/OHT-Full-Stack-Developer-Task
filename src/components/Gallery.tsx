@@ -5,7 +5,7 @@ import { useImageContext } from "../context/ImageContext";
 import { removeImage } from "../utils/imagesActions"; // Make sure to update this import path accordingly
 import name from "../assets/name.png";
 import noData from "../assets/noData.png";
-import rate from "./assets/rate.png";
+import rate from "../assets/rate.png";
 
 export default function Gallery() {
   const { images, setImages } = useImageContext(); // Get images and the setter
