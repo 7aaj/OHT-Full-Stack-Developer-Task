@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { RouterProvider } from "react-router-dom";
+import "./App.css";
+import sidebar from "./assets/Closed won.png";
+import header from "./assets/header.png";
+import rate from "./assets/rate.png";
+import { ImageProvider } from "./context/ImageContext";
+import { router } from "./routes/routes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ImageProvider>
+      <div className="App">
+        <header className="w-full">
+          <img className="w-full" src={header} alt="" />
+        </header>
+        <div className="flex">
+          <div className="">
+            <img className="w-full" src={sidebar} alt="" />
+          </div>
+          <div className="flex flex-col flex-1">
+            <RouterProvider router={router} />
+            <div className="">
+              <img src={rate} alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </ImageProvider>
   );
 }
 
