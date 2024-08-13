@@ -2,7 +2,7 @@ import { RouterProvider } from "react-router-dom";
 import "./App.css";
 import sidebar from "./assets/Closed won.png";
 import header from "./assets/header.png";
-import rate from "./assets/rate.png";
+
 import { ImageProvider } from "./context/ImageContext";
 import { router } from "./routes/routes";
 
@@ -19,9 +19,6 @@ function App() {
           </div>
           <div className="flex flex-col flex-1">
             <RouterProvider router={router} />
-            <div className="">
-              <img src={rate} alt="" />
-            </div>
           </div>
         </div>
       </div>
